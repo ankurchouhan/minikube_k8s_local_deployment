@@ -1,6 +1,7 @@
-# 🧩 Kubernetes Full-Stack Deployment
+# 🚀 Minikube Kubernetes Local Deployment
 
-This project demonstrates deploying a **Flask Frontend** and an **Express Backend** on **Kubernetes**, showcasing communication between the two services, verified using both CLI and Dashboard.
+This project demonstrates deploying a **Flask Frontend** and an **Express Backend** locally on **Kubernetes (Minikube)**.  
+It includes screenshots of deployments, services, and successful communication between both applications.
 
 ---
 
@@ -13,58 +14,63 @@ Below are screenshots confirming successful deployment and communication between
 ### 1️⃣ Pods and Services  
 Output of `kubectl get pods` and `kubectl get svc`, showing both **Flask frontend** and **Express backend** pods and services running successfully.
 
-![Pods and Services](./Screenshot%202025-12-10%20223923.png)
+![Pods and Services](./images/Screenshot%202025-12-10%20223923.png)
 
 ---
 
 ### 2️⃣ Flask Frontend (Browser Output)  
 The **Flask frontend** running in the browser, successfully communicating with the **Express backend** through Kubernetes services.
 
-![Flask Frontend](./Screenshot%202025-12-10%20223944.png)
+![Flask Frontend](./images/Screenshot%202025-12-10%20223944.png)
 
 ---
 
 ### 3️⃣ Kubernetes Dashboard (Pods Running)  
 The **Kubernetes Dashboard** view showing both application pods in a **Running** state.
 
-![Kubernetes Dashboard](./Screenshot%202025-12-10%20224016.png)
+![Kubernetes Dashboard](./images/Screenshot%202025-12-10%20224016.png)
 
 ---
 
 ### 4️⃣ Commands and Deployments  
 Verification of deployment and command outputs confirming successful setup and operation of all Kubernetes resources.
 
-![Commands and Deployments](./Screenshot%202025-12-10%20224041.png)
+![Commands and Deployments](./images/Screenshot%202025-12-10%20224041.png)
 
 ---
 
-## ✅ Summary  
+## ✅ Summary
+
 These screenshots verify:
-- Successful deployment of both **Flask Frontend** and **Express Backend** pods.  
-- Proper service exposure and internal communication through Kubernetes.  
-- Kubernetes Dashboard showing healthy, running pods.  
-- Verified CLI outputs for deployments and services.
+- Successful deployment of both **Flask Frontend** and **Express Backend** pods  
+- Proper **service exposure** and **internal communication** through Kubernetes  
+- Kubernetes Dashboard showing **healthy, running pods**  
+- Verified **CLI outputs** for deployments and services  
 
 ---
 
 ## ⚙️ Tech Stack
-- **Frontend:** Flask (Python)  
-- **Backend:** Express.js (Node.js)  
-- **Containerization:** Docker  
-- **Orchestration:** Kubernetes  
-- **Dashboard:** Kubernetes Dashboard  
+
+| Component | Technology |
+|------------|-------------|
+| **Frontend** | Flask (Python) |
+| **Backend** | Express.js (Node.js) |
+| **Containerization** | Docker |
+| **Orchestration** | Kubernetes (Minikube) |
+| **Monitoring** | Kubernetes Dashboard |
 
 ---
 
-## 🚀 Commands Used
+## 🧰 Commands Used
+
 ```bash
 # Build Docker images
 docker build -t flask-frontend .
 docker build -t express-backend .
 
 # Push to Docker Hub
-docker push <username>/flask-frontend
-docker push <username>/express-backend
+docker push ankurchouhan/flask-frontend
+docker push ankurchouhan/express-backend
 
 # Deploy to Kubernetes
 kubectl apply -f flask-deployment.yaml
